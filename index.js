@@ -4,6 +4,12 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
+app.use((req, res, next) => {
+  res.setHeader('Content-Type', 'application/json; charset=utf-8');
+  next();
+});
+
+
 // Datos de ejemplo (en lugar de una base de datos real)
 const users = [
   { id: 1, name: 'John' },
