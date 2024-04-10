@@ -38,6 +38,6 @@ app.post('/api/users', (req, res) => {
 });
 
 // Inicia el servidor
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
